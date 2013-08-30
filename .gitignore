@@ -1,0 +1,6 @@
+*~
+*.swp
+tpl_cache/*
+logs/*.log
+.DS_Store
+

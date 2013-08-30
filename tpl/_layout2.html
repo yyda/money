@@ -1,0 +1,41 @@
+<!doctype hmtl>
+<html lang="zh-Hant">
+	<head>
+		{% block head %}
+		{% include '_header.html' %}
+		{% endblock %}
+	</head>
+	<body>
+		<br>
+		<!--<h2>{{breadcrumb_title}}</h2>-->
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span2">
+					<div class="wll sidebar-nav">
+						<ul class="nav nav-list">
+							<li class="nav-header">Sidebar<li>
+								<li><a href="#">menu1</a></li>
+								<li><a href="#">menu2</a></li>
+								<li><a href="#">menu3</a></li>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="span10">
+					{% block content %}
+	        		{% endblock %}	
+				</div>
+
+			</div><!--/row-->
+
+			<hr>
+			<footer>
+				<p>&copy; Compayn 2013</p>
+			</footer>
+		</div><!--/.fulid-container-->
+		{% block script %}
+		{% include '_script.html' %}
+		{% endblock %}
+	</body>
+</html>

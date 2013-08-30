@@ -1,0 +1,63 @@
+<!doctype hmtl>
+<html lang="zh-Hant">
+	<head>
+		{% block head %}
+		{% include '_header.html' %}
+		{% endblock %}
+	</head>
+	<body>
+		<!--<h2>{{breadcrumb_title}}</h2>-->
+		<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">{{breadcrumb_title}}</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collaspe">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+				</div>
+
+				<div class="collapse navbar-collapse navbar-ex1-collaspe">
+					<ul class="nav navbar-nav">
+						<li><a href="">link1</a></li>
+						<li><a href="">link2</a></li>
+						<li><a href="">link3</a></li>
+					</ul>				
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-3" id="sidebar">
+					<div class="collapse navbar-collapse navbar-ex1-collaspe">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-home"></span> menu1</a></li>
+							<li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> menu2</a></li>
+							<li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> menu3</a></li>
+							<li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> menu4</a></li>
+							<li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> menu5</a></li>
+							<li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> menu6</a></li>
+						</ul>
+					</div>
+				</div> <!-- sidebar -->
+
+				<div class="col-xs-10 col-md-9" id="content">
+					{% block content %}
+					{% endblock %}	
+				</div> <!-- 內容 -->
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<div class="container">
+				<p>&copy; Compayn 2013</p>
+			</div>
+		</footer>
+		{% block script %}
+		{% include '_script.html' %}
+		{% endblock %}
+	</body>
+</html>
