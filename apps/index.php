@@ -8,3 +8,4 @@ $app->get('/home', function() use ($app) {
 		'breadcrumb_title' => 'Money'
 		));
 });
+

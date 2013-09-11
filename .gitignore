@@ -4,3 +4,8 @@ tpl_cache/*
 logs/*.log
 .DS_Store
 
+/nbproject/private/
+/nbproject/*
+.buildpath
+.project
+.settings/*
